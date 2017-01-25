@@ -107,7 +107,7 @@ if ($return === 0) {
         }
         
         //Send email notification
-        mail(MAILSTATS_RECIPIENT, '5.5.1 No such user rejections on ' . gethostname(), $data, 'From: root@localhost');
+        mail(MAILSTATS_RECIPIENT, '5.1.1 No such user rejections on ' . gethostname(), $data, 'From: root@localhost');
     }
     
     //Update the last run timestamp
