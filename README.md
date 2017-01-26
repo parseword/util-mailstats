@@ -12,4 +12,4 @@ The number of rejections per DNSBL is tallied, emailed to the administrator, and
 
 ## mailstats-no-such-user.php
 
-A daily cron job that parses the postfix maillog for rejections due to `5.5.1 No such user` (or any arbitrary message) and records them to a database. Sender, recipient, and origin MTA are recorded to the database and an email summary is sent. Useful for identifying RFC-ignorant senders, as 5.5.1 is a permanent failure.
+A daily cron job that parses the postfix maillog for rejections due to `5.1.1 No such user` (or any arbitrary message) and records them to a database. Sender, recipient, and origin MTA are recorded to the database and an email summary is sent. Useful for identifying RFC-ignorant senders, as 5.1.1 is a permanent failure.
