@@ -15,3 +15,5 @@ CREATE TABLE `no_such_user_rejections` (
   UNIQUE KEY `unique_message` (`sender`,`recipient`,`mta_host`,`mta_ip`,`timestamp`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1
 ;
+
+INSERT `no_such_user_lastrun` (`timestamp`) VALUES (UNIX_TIMESTAMP(NOW()));
