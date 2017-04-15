@@ -99,6 +99,6 @@ if ($return === 0 && count($output) > 0) {
     }
     
     //Send email notification
-    mail(MAILSTATS_RECIPIENT, 'DNSBL rejections on ' . gethostname() . ' for ' 
+    mail(MAILSTATS_RECIPIENT, '[mailstats] DNSBL rejections on ' . gethostname() . ' for ' 
         . $dbdate, $data, 'From: root@localhost');
 }
