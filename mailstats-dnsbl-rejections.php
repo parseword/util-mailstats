@@ -72,7 +72,7 @@ else {
 //The DNSBL hostname is in log field 20 when the daypart has two digits, and
 //field 21 when the daypart has one space-padded digit.
 $cutField = substr($daypart, 0, 1) == ' ' ? 21 : 20;
-$command = "grep '{$logDate}' /var/log/maillog* | grep 'Service unavailable' "
+$command = "grep '{$logDate}' /var/log/maillog* | grep 'blocked using' "
         . "| cut -f{$cutField} -d' ' | sort -n | uniq -c | sort -nr";
 
 $return = null;
