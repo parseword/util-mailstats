@@ -114,7 +114,7 @@ if ($return === 0 && !empty($output)) {
     $body = 'DNSBL rejection counts for ' . $dbDate . " follow:\n\n";
 
     foreach ($output as $line) {
-        $body .= "{$line}\n";
+        $body .= str_replace(';', '', $line) . "\n";
     }
 
     if (!empty($errors)) {
