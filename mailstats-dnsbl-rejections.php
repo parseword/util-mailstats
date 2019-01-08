@@ -33,7 +33,7 @@ require_once('/etc/config/mailstats.conf');
 try {
     //Get a database connection
     $conn = new PDO('mysql:host=' . MAILSTATS_DB_HOST . ';dbname='
-            . MAILSTATS_DB_NAME . ';charsetlatin1', MAILSTATS_DB_USER,
+            . MAILSTATS_DB_NAME . ';charset=latin1', MAILSTATS_DB_USER,
             MAILSTATS_DB_PASS);
 }
 catch (PDOException $e) {
