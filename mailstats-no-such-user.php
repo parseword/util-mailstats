@@ -56,7 +56,7 @@ if ($return === 0) {
         if ($timestamp > $lastrun) {
 
             //Attempt to parse the sender, recipient, and origin MTA IP
-            if (preg_match('|from (.*?)\[(.*?)\]; from=<(.*?)> to=<(.*?)> proto|mi',
+            if (preg_match('|from (\S+?)\[(.*?)\]; from=<(.*?)> to=<(.*?)> proto|mi',
                             $line, $matches)) {
                 $mta_host = $matches['1'];
                 $mta_ip = $matches['2'];
